@@ -1,0 +1,47 @@
+
+owner: 
+  beijing:  1101
+  tianjin:  1201
+  jiangsu:  3201
+  jiangxi:  3601
+  guizhou:  5201
+  hebei:  1301
+  jilin:  2201
+  qinghai:  6301
+  hunan:  4301
+
+test:  01
+
+#数据库连接信息
+spring: 
+  datasource: 
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/trawe?useUnicode=true&characterEncoding=utf8&mysqlEncoding=utf8&useAffectedRows=true
+    username: root
+    password: 123456
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+  
+    maxWait: 60000
+    #测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    #间，单位是毫秒
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    #s，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,log4j
+    #ties属性来打开mergeSql功能；慢SQL记录
+    connectionProperties: druid.stat.mergeSql:true;druid.stat.slowSqlMi
+server:
+  port: 12345
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
