@@ -1,5 +1,6 @@
 package tw.demo.demo;
 
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 import sun.text.resources.BreakIteratorInfo;
 
@@ -77,6 +78,44 @@ public class ThreadPoolExecutorsTest {
 
         ArrayList<String> strings = new ArrayList<>();
 
+
+    }
+
+    @Test
+    public void test03(){
+
+//        @Test
+//        public void initReq(){
+//            JSONObject contentJson = new JSONObject();
+//            contentJson.put("userIdNum","370828199303261318");
+//            contentJson.put("appSecret","9FE7B8F95FC9247109028ADD9D49AC59");
+//            contentJson.put("vehicleld","闽A8696F_1");
+//
+//            JSONObject userObject = new JSONObject();
+//            userObject.put("appid","0000001002");
+//            userObject.put("token","");
+//
+//            JSONObject pageObject = new JSONObject();
+//            pageObject.put("pageNo",1);
+//            pageObject.put("pageSize",10);
+//
+//            JSONObject jsonObject = new JSONObject();
+//            jsonObject.put("signType",1);
+//            jsonObject.put("_uri","public/login/user?by=useridnum");
+//            jsonObject.put("user",userObject);
+//            jsonObject.put("reqTime",new Date());
+//            jsonObject.put("content",contentJson);
+//            jsonObject.put("page",pageObject);
+//            String fjgstMD5Str = MD5Utils.getFjgstMD5Str(jsonObject, "9FE7B8F95FC9247109028ADD9D49AC59");
+//            String md5Str = MD5Utils.md5(fjgstMD5Str);
+//            jsonObject.put("sign",md5Str);
+//            System.out.println(jsonObject.toJSONString());
+//            String url = "http://mintongbao.mgskj.com/etctest/public/login/user?by=useridnum";
+//            String result2 = HttpRequest.post(url).body(jsonObject.toJSONString()).header("version","01").header("Content-Type","application/json")
+//                    .execute().body();
+//            log.info("返回参数---{}", result2);
+//
+//        }
 
     }
 
