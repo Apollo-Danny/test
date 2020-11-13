@@ -20,18 +20,21 @@ public class Demo01 {
     public static void main(String[] args) {
 
 
-//        List<Integer> numbers2 = Arrays.asList(3, 4);
-//        List<int[]> pairs = numbers1.stream()
-//                        .flatMap(i -> numbers2.stream()
-//                                .map(j -> new int[]{i, j})
-//                        )
-//                        .collect(Collectors.toList());
-//        System.out.println(pairs.get(0));
+        List<Integer> numbers2 = Arrays.asList(3, 4);
+        List<int[]> pairs = numbers2.stream()
+                        .flatMap(i -> numbers2.stream()
+                                .map(j -> new int[]{i, j})
+                        )
+                        .collect(Collectors.toList());
+        System.out.println(pairs.get(0).length);
+
+
+        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+        objectObjectHashMap.put("1",123);
 //
-//
-//        List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
-//        List<String> filtered = strings.parallelStream().filter( str -> !str.isEmpty()).collect(Collectors.toList());
-//        System.out.println(JSONArray.toJSON(filtered));
+        List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
+        List<String> filtered = strings.parallelStream().filter( str -> !str.isEmpty()).collect(Collectors.toList());
+        System.out.println(JSONArray.toJSON(filtered));
 //
 //
 //        List<String> list = Arrays.asList("1", "2");
