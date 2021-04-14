@@ -1,4 +1,6 @@
-import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
+/*
+
+import io.netty.handler.codec.base64.Base64;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -6,15 +8,18 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.SecureRandom;
 
+*/
 /*import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-import java.security.SecureRandom;*/
+import java.security.SecureRandom;*//*
+
 
 public class AESUtil {
 
-    /*public static void main(String[] args) throws Exception {
+    */
+/*public static void main(String[] args) throws Exception {
         try {
             String str = URLEncoder.encode("a12345", "UTF-8");
             System.out.println(str);
@@ -34,14 +39,17 @@ public class AESUtil {
         //String decrypt = decrypt(cipher, key);
         String decrypt = decrypt("U2FsdGVkX19/Zt0XVogNLdEyQPBfzjdDgeuf1JFghE0=", key);
         System.out.println("原文是：" + decrypt);
-    }*/
+    }*//*
 
-    /**
+
+    */
+/**
      * AES加密
      *
      * @param content   需要加密的内容
      * @param secureKey 加密秘钥
-     */
+     *//*
+
     public static String encrypt(String content, String secureKey) {
         try {
             KeyGenerator kgen = KeyGenerator.getInstance("AES");
@@ -67,12 +75,14 @@ public class AESUtil {
     }
 
 
-    /**
+    */
+/**
      * AES解密
      *
      * @param content   待解密内容
      * @param secureKey 秘钥
-     */
+     *//*
+
     public static String decrypt(String content, String secureKey) {
         try {
             KeyGenerator kgen = KeyGenerator.getInstance("AES");
@@ -108,3 +118,4 @@ public class AESUtil {
         }
     }
 }
+*/
